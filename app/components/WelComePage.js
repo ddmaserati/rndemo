@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import {
-    View, Image, StatusBar, Platform, Animated, Easing,Text
+    View, Image, StatusBar, Platform, Animated, Easing,Text,Button
 } from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import styles, {screenHeight, screenWidth} from "../style"
@@ -13,7 +13,10 @@ import {bindActionCreators} from 'redux'
 import * as Constant from "../style/constant"
 // import SplashScreen from './widget/native/SplashNative'
 
+import ToastLong from "../common/ToastProxy"
+import ToastShow from '../common/ToastProxy';
 
+// import Toast from 'react-native-root-toast'
 /**
  * 欢迎页
  */
@@ -23,8 +26,20 @@ class WelcomePage extends Component {
   
   render() {     
       return (
-          <View>
-           <Text>Test</Text> 
+          <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+           <Text>Welcome!</Text> 
+           <Button
+           title="go to login"
+           onPress = {
+                ()=> 
+                {
+                    ToastShow('sdfsfsdf')
+                }
+           }
+           />
+
+
+          
           </View>
       )
   }

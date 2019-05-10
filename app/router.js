@@ -14,6 +14,7 @@ import styles from './style'
 import * as Constant from './style/constant'
 import TabIcon from './components/widget/TabIcon'
 import Test from './components/Test'
+import LoginPage from './components/LoginPage'  // 登录界面
 /**
  * 全局路由
  */
@@ -33,18 +34,13 @@ const getRouter = () => {
                     <Scene key="WelcomePage" component={WelcomePage}  hideNavBar hideTabBar hide />
                 </Scene>
 
+              
                 <Scene key="root"
                  navigationBarStyle={styles.navigationBar}
                  titleStyle={{color: Constant.titleTextColor}}
-                 
                 >
-                
-              
-                     
                     <Scene
                         key="mainTabPage"
-                      
-                       
                         tabs
                         lazy
                         wrap={false}
@@ -92,6 +88,11 @@ const getRouter = () => {
                 <Scene key="test"
                
                 component={Test}></Scene>
+
+<Scene key="LoginPage"
+                component={LoginPage}
+            ></Scene>
+
             </Lightbox>
            
         </Router>
